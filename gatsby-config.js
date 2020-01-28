@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/gatsby-docz-mermaid',
   plugins: [
     {
       resolve: 'gatsby-theme-docz',

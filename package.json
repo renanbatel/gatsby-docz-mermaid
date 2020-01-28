@@ -5,6 +5,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "deploy": "yarn build --prefix-paths && gh-pages -d public",
     "lint": "eslint .",
     "format": "eslint . --fix"
   },
@@ -33,6 +34,7 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-simple-import-sort": "^5.0.1",
     "eslint-plugin-unicorn": "^15.0.1",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   }
 }
