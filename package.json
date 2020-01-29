@@ -5,9 +5,9 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "yarn build --prefix-paths && gh-pages -d public",
-    "lint": "eslint .",
-    "format": "eslint . --fix"
+    "deploy": "yarn build && pulumi up",
+    "lint": "eslint . --ext js --ext ts",
+    "format": "eslint . --ext js --ext ts --fix"
   },
   "dependencies": {
     "docz": "^2.0.0",
@@ -24,7 +24,11 @@
     "react-helmet-async": "^1.0.4"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
+    "@pulumi/aws": "^1.19.0",
+    "@pulumi/pulumi": "^1.9.1",
+    "@types/node": "^13.5.1",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.0",
@@ -34,7 +38,7 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-simple-import-sort": "^5.0.1",
     "eslint-plugin-unicorn": "^15.0.1",
-    "gh-pages": "^2.2.0",
+    "mime": "^2.4.4",
     "prettier": "^1.19.1"
   }
 }

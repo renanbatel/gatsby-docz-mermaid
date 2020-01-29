@@ -1,0 +1,4 @@
+name: docz-app-gatsby
+runtime: nodejs
+description: An documentation site boilerplate made with Gatsby, Docz and Mermaid.
+main: infra/
