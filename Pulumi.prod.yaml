@@ -1,0 +1,5 @@
+config:
+  aws:region: us-east-1
+  site:dir: public
+  site:name: gatsby-docz-mermaid
+  site:log-requests: true

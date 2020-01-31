@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "gatsby develop",
-    "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "yarn build && pulumi up",
+    "build": "gatsby build",
+    "build:deploy": "yarn build && yarn lambda:build && yarn deploy",
+    "deploy": "pulumi up",
+    "lambda:build": "./infra/scripts/lambda-build.sh",
     "lint": "eslint . --ext js --ext ts",
     "format": "eslint . --ext js --ext ts --fix"
   },
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@pulumi/aws": "^1.19.0",
     "@pulumi/pulumi": "^1.9.1",
+    "@types/mime": "^2.0.1",
     "@types/node": "^13.5.1",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",

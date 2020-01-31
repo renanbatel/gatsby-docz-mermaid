@@ -1,1 +1,1 @@
-export * from './bucket-public-read-policy';
+export * from './cloudfront-access-bucket-policy';
